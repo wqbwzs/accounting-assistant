@@ -10,8 +10,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="生活费手账">
 <meta name="application-name" content="生活费手账">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FFF9F5'/%3E%3Ctext y='.9em' x='50%25' text-anchor='middle' font-size='72'%3E%F0%9F%8D%A1%3C/text%3E%3C/svg%3E">
-<title>🍡 生活费手账 · 贸大版</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FFF9F5'/%3E%3Ctext y='.9em' x='50%25' text-anchor='middle' font-size='72'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E">
+<title>🍎 生活费手账 · 贸大版</title>
 <style>
   :root{
     --cream:#FFF9F5;
@@ -522,7 +522,7 @@
 
 <aside class="sidebar" aria-label="主导航">
   <div class="side-brand">
-    <span class="logo">🍡</span>
+    <span class="logo">🍎</span>
     <b>生活费手账</b>
     <small>UIBE · 4000 元/月</small>
   </div>
@@ -542,7 +542,7 @@
 <div id="app">
   <div class="page">
     <header class="topbar">
-      <div class="brand">🍡 <b>生活费手账</b><span class="tag">贸大 · 4000</span></div>
+      <div class="brand">🍎 <b>生活费手账</b><span class="tag">贸大 · 4000</span></div>
       <div class="top-actions">
         <span class="date-chip" id="dateChip"></span>
         <button class="icon-btn" data-action="nav" data-view="me" aria-label="打开我的">⚙️</button>
@@ -1507,7 +1507,7 @@
       '<p><b>今日可花</b> =（本月预算 − 本月已花）÷ 剩余天数（含今天）。</p>' +
       '<p><b>分类预算</b>按贸大真实物价设的：食堂一餐 5–20 元、校外聚餐人均 60–80 元、洗澡一次 2–5 元。</p>' +
       '<p>数据只保存在浏览器本地，不上传、不联网；关掉页面也不会丢，但清缓存会丢，记得导出备份。</p>' +
-      '<p>做给在惠新东街认真生活的你 🍡</p>' +
+      '<p>做给在惠新东街认真生活的你 🍎</p>' +
       '</section>';
   }
 
@@ -1551,7 +1551,7 @@
       var total = store.config.categories.reduce(function(s, c){ return s + c.budget; }, 0);
       totalEl.textContent = fmt(total) + " / 生活费 " + fmt(store.config.monthlyBudget);
     }
-    document.title = "🍡 生活费手账 · " + monthLabel(state.month);
+    document.title = "🍎 生活费手账 · " + monthLabel(state.month);
   }
 
   /* =========================================================
@@ -1836,7 +1836,7 @@
         '<span class="e">' + p.emoji + '</span><b>' + p.name + '</b><small>' + p.tag + '</small></button>';
     }).join("");
     openSheet(
-      '<div class="sheet-head"><h3>欢迎来到生活费手账 🍡</h3></div>' +
+      '<div class="sheet-head"><h3>欢迎来到生活费手账 🍎</h3></div>' +
       '<div class="sheet-body">' +
         '<p>你在贸大读大一，每个月生活费 <b>4000</b> 元。先选一个花钱人格，我把 14 个分类的预算分好：</p>' +
         '<div class="persona-grid">' + cards + '</div>' +
@@ -1882,7 +1882,7 @@
     if(!silent){
       saveStore();
       render();
-      toast("已切换成「" + p.name + "」预算 🍡");
+      toast("已切换成「" + p.name + "」预算 🍎");
     }
   }
 
@@ -2168,7 +2168,7 @@
       if(sum !== monthly){
         toast("保存啦，但分类合计 " + fmtShort(sum) + " ≠ 生活费 " + fmtShort(monthly));
       }else{
-        toast("预算更新好啦 🍡");
+        toast("预算更新好啦 🍎");
       }
       return;
     }
@@ -2219,7 +2219,7 @@
   function setupHomeScreen(){
     try{
       if(!window.Blob || !URL || !URL.createObjectURL) return;
-      var icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FFF9F5'/%3E%3Ccircle cx='256' cy='256' r='168' fill='%23FFF0F4'/%3E%3Ctext x='256' y='340' font-size='220' text-anchor='middle'%3E%F0%9F%8D%A1%3C/text%3E%3C/svg%3E";
+      var icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FFF9F5'/%3E%3Ccircle cx='256' cy='256' r='168' fill='%23FFF0F4'/%3E%3Ctext x='256' y='340' font-size='220' text-anchor='middle'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E";
       var mf = {
         name: "生活费手账 · 贸大版", short_name: "生活费手账",
         start_url: location.pathname, display: "standalone",
