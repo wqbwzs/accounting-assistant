@@ -1,0 +1,13 @@
+# 临时 / 中间文件
+.tmp_dom.html
+
+# AI 开发笔记（不必公开）
+CLAUDE1.md
+CLAUDE2.md
+TASK.md
+
+# 开发脚本
+scripts/
+
+# Claude 本地配置
+.claude/
